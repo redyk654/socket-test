@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react'
-import { FlatList, Text, TextInput, View, Image, StyleSheet, Button } from 'react-native'
+import { FlatList, Text, TextInput, View, Image, StyleSheet, Button, TouchableOpacity } from 'react-native'
 import * as Font from 'expo-font';
 import { globalStyles } from './styles/Globals';
 import io from 'socket.io-client';
@@ -57,10 +57,10 @@ export default function App() {
       <View>
         <Text style={{textAlign: 'right', color: '#ccc', width: 320}}>forgot your password ?</Text>
       </View>
-      <View style={{marginVertical: 25}}>
-        <Button
-          title='login'
-        />
+      <View style={{alignItems: 'center', marginTop: 20}}>
+        <TouchableOpacity style={styles.btn}>
+          <Text style={{color: '#fff', textAlign: 'center',}}>LOGIN</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
@@ -94,6 +94,13 @@ const styles = StyleSheet.create({
     opacity: .7,
     paddingHorizontal: 15,
     marginVertical: 8,
+  },
+  btn: {
+    width: 280,
+    height: 60,
+    backgroundColor: '#36c6ff',
+    justifyContent: 'center',
+    borderRadius: 50,
   },
 })
 
