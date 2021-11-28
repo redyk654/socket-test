@@ -6,38 +6,28 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 export default function Header() {
     return (
         <View style={styles.header}>
-            <View>
-                <Text style={styles.textHeader}>WhatsApp Woo</Text>
-            </View>
-            <View style={styles.iconsContainer}>
-                <View style={{marginRight: 20}}>
-                    <Feather name="search" size={24} color="#fff" />
-                </View>
-                <View>
-                    <SimpleLineIcons name="options-vertical" size={24} color="#fff" />
-                </View>
-            </View>
+            <Text style={styles.textHeader}>Hi Friends !</Text>
+            <Text style={{fontSize: 15, fontFamily: 'poppins-regular', letterSpacing: 1}}>You are in <Text style={{color: '#fa2545'}}>54 KING PORTS</Text> </Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     header: {
-      backgroundColor: '#41aa95',
       height: 70,
-      marginTop: 24,
-      padding: 10,
-      flexDirection: 'row',
-      justifyContent: 'space-between'
+      marginTop: 24, 
+      padding: 14,
     },
     textHeader: {
-      color: '#fff',
+      color: '#000',
       fontSize: 27,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      opacity: .8,
+      fontFamily: 'poppins-regular',
     },
     iconsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: 8,
     },
-})
+});

@@ -5,7 +5,6 @@ export const globalStyles = StyleSheet.create({
         padding: 24,
         flex: 1,
         backgroundColor: '#fff',
-        
     },
     titleText: {
         fontFamily: 'poppins-regular',

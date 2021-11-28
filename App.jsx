@@ -3,6 +3,7 @@ import { FlatList, Text, TextInput, View, Image, StyleSheet, Button, TouchableOp
 import * as Font from 'expo-font';
 import { globalStyles } from './styles/Globals';
 import io from 'socket.io-client';
+import Home from './screens/Home';
 
 export default function App() {
 
@@ -17,51 +18,7 @@ export default function App() {
   
   return (
     <View style={globalStyles.container}>
-      <View style={{alignItems: 'center',}}>
-        <Image
-          style={styles.topImg}
-          source={require("./assets/top.png")}
-        />
-      </View>
-      <View style={styles.boxImg}>
-        <Image
-          style={styles.img1}
-          source={require('./assets/ee.jpg')}
-        />
-        <Image
-        style={{...styles.img1, position: 'absolute', right: 55, top: 75}}
-          source={require('./assets/rr.jpg')}
-        />  
-      </View>
-      <View style={styles.boxText}>
-        <Text 
-          style={{textAlign: 'center', fontWeight: 'bold', fontSize: 28, fontFamily: 'poppins-light', opacity: .7}}>
-          Login Now
-        </Text>
-        <Text style={{fontFamily: 'poppins-light', textAlign: 'center', marginTop: 8}}>
-          Lorem ipsum dolor sit amet, consectetur 
-          adipisicing elit. Modi esse consectetur temporibus rem.
-        </Text>
-      </View>
-      <View style={{alignItems: 'center'}}>
-        <TextInput
-          style={styles.input}
-          placeholder="User name"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Number phone"
-          keyboardType='numeric'
-        />
-      </View>
-      <View>
-        <Text style={{textAlign: 'right', color: '#ccc', width: 320}}>forgot your password ?</Text>
-      </View>
-      <View style={{alignItems: 'center', marginTop: 20}}>
-        <TouchableOpacity style={styles.btn}>
-          <Text style={{color: '#fff', textAlign: 'center',}}>LOGIN</Text>
-        </TouchableOpacity>
-      </View>
+      <Home />
     </View>
   )
 }
